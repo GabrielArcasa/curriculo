@@ -1,54 +1,56 @@
 // filepath: src/pages/FrontendPortfolio.tsx
-import { getFrontendProjects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import { Monitor, Gamepad2, Sparkles } from "lucide-react";
+import { useLanguage } from "../contexts/language-context";
 
 export default function FrontendPortfolio() {
-  const projects = getFrontendProjects();
+  const { content } = useLanguage();
+  const projects = content.projects.filter((project) => project.category === "frontend" || project.category === "gamedev");
+  const pageContent = content.portfolio.frontend;
 
   return (
-    <div className="flex flex-col gap-10 py-6 md:py-10">
+    <div className="portfolio-page">
       {/* Page Header Banner */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 p-8 md:p-12 border border-indigo-500/10 dark:border-indigo-400/5">
-        <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-indigo-500/10 blur-3xl" />
-        <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-pink-500/10 blur-3xl" />
+      <div className="portfolio-hero portfolio-hero--frontend">
+        <div className="portfolio-hero__glow portfolio-hero__glow--frontend-primary" />
+        <div className="portfolio-hero__glow portfolio-hero__glow--frontend-secondary" />
 
-        <div className="relative max-w-3xl">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700 dark:bg-indigo-950/40 dark:text-indigo-400">
-            <Sparkles className="h-3 w-3 animate-pulse" />
-            <span>Interfaces & Game Dev</span>
+        <div className="portfolio-hero__content">
+          <span className="portfolio-hero__eyebrow portfolio-hero__eyebrow--frontend">
+            <Sparkles className="portfolio-hero__eyebrow-icon portfolio-hero__eyebrow-icon--pulse" />
+            <span>{pageContent.eyebrow}</span>
           </span>
           
-          <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
-            Portfolio Frontend & Games
+          <h1 className="portfolio-hero__title portfolio-hero__title--frontend">
+            {pageContent.title}
           </h1>
           
-          <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-650 dark:text-gray-300">
-            Exploração prática de interfaces ricas, reatividade e interações visuais. Aqui você encontra desde aplicações web modernas com React e Tailwind CSS até jogos independentes 3D e 2D imersivos desenvolvidos com C# na Unity e C++ / Blueprints na Unreal Engine 5.
+          <p className="portfolio-hero__description portfolio-hero__description--frontend">
+            {pageContent.description}
           </p>
         </div>
       </div>
 
       {/* Grid Section */}
       <div>
-        <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-            <Monitor className="h-5 w-5 text-indigo-650 dark:text-indigo-400" />
-            <span>Todos os Projetos ({projects.length})</span>
+        <div className="portfolio-section__header">
+          <h2 className="portfolio-section__title">
+            <Monitor className="portfolio-section__title-icon" />
+            <span>{pageContent.sectionTitle} ({projects.length})</span>
           </h2>
         </div>
 
         {projects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="portfolio-grid">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-gray-300 py-12 text-center dark:border-gray-800">
-            <Gamepad2 className="h-12 w-12 text-gray-400" />
-            <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Nenhum projeto encontrado</h3>
-            <p className="mt-2 text-sm text-gray-500">Projetos frontend serão adicionados em breve.</p>
+          <div className="portfolio-empty-state">
+            <Gamepad2 className="portfolio-empty-state__icon" />
+            <h3 className="portfolio-empty-state__title">{pageContent.emptyTitle}</h3>
+            <p className="portfolio-empty-state__text">{pageContent.emptyText}</p>
           </div>
         )}
       </div>
