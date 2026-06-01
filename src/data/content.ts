@@ -95,7 +95,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
     navigation: {
       home: "Início",
       frontend: "Frontend & Jogos",
-      backend: "Portfolio Backend",
+      backend: "Portfólio Backend",
     },
     header: {
       themeToggleLabel: "Alternar tema",
@@ -116,7 +116,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
       descriptionMiddle: "Concomitante à arquitetura de backend, aplico minha forte paixão por desenvolvimento de jogos digitais explorando",
       descriptionStrongGame: "Unity, Unreal Engine e programação em C# e C++",
       descriptionEnd: "unindo a robustez corporativa com técnicas avançadas de interatividade.",
-      backendCta: "Ver Portfolio Backend",
+      backendCta: "Ver Portfólio Backend",
       frontendCta: "Ver Jogos & Frontend",
       educationSenac: "Bacharelado em Ciência da Computação",
       educationUniversity: "Pós-Graduação em Desenvolvimento de Jogos Digitais",
@@ -161,6 +161,8 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
             { name: "Unreal Engine", level: "Avançado" },
             { name: "Android SDK", level: "Intermediário" },
             { name: "React / TypeScript / JavaScript", level: "Intermediário" },
+            { name: "Tailwind CSS", level: "Intermediário" },
+          
           ],
         },
       ],
@@ -168,7 +170,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
     portfolio: {
       frontend: {
         eyebrow: "Interatividade & Experiência",
-        title: "Portfolio Frontend & Game Dev",
+        title: "Portfólio Frontend & Game Dev",
         description: "Espaço dedicado a projetos interativos e desenvolvimento de jogos. Aqui você encontra o resultado da minha especialização em Game Dev, unindo conceitos avançados de computação gráfica e game design utilizando engines de ponta do mercado como Unity e Unreal.",
         sectionTitle: "Projetos de Jogos e Web",
         emptyTitle: "Nenhum projeto selecionado",
@@ -176,7 +178,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
       },
       backend: {
         eyebrow: "Sistemas Distribuídos & Missão Crítica",
-        title: "Portfolio Backend",
+        title: "Portfólio Backend",
         description: "Demonstração de sistemas e arquiteturas de backend resilientes projetados por mim. Especialidade no desenvolvimento de microsserviços de alto throughput no ecossistema .NET, barramentos de mensageria assíncrona corporativos e modernizações de plataformas que movimentam milhões em valor de mercado.",
         sectionTitle: "Sistemas Corporativos e APIs",
         emptyTitle: "Nenhum sistema encontrado",
@@ -372,6 +374,8 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
             { name: "Unreal Engine", level: "Advanced" },
             { name: "Android SDK", level: "Intermediate" },
             { name: "React / TypeScript / JavaScript", level: "Intermediate" },
+            { name: "Tailwind CSS", level: "Intermediate" },
+
           ],
         },
       ],
