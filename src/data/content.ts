@@ -1,4 +1,7 @@
 import type { Project } from "./projects";
+import brewImg from "../assets/brew.png";
+import baralhoImg from "../assets/baralho.png";
+import finAppImg from "../assets/finApp.png";
 
 export type Language = "pt" | "en";
 
@@ -237,7 +240,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         category: "gamedev",
         technologies: ["Unity", "C#", "UI Toolkit", "Scriptable Objects", "Game Design"],
         role: "Indie Game Developer",
-        imageUrl: "src/assets/brew.png",
+        imageUrl: brewImg,
         highlights: [
           "Projetou um sistema desacoplado e escalável de gerenciamento de estados em C# para guiar turnos de combate e rotinas de IA de NPCs.",
           "Desenvolveu toda a interface de usuário (UI) adaptável de maneira robusta através do Unity UI Toolkit.",
@@ -252,7 +255,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         category: "frontend",
         technologies: ["React", "Tailwind CSS", "TypeScript","Vite"],
         role: "Full Stack Developer",
-        imageUrl: "src/assets/baralho.png",
+        imageUrl: baralhoImg,
         highlights: [
           "Narrativa Totalmente Aleatoria ou Personalizada a Escolha do Mestre",
           "MAIS DE 551 TRILHÕES de combinações possíveis de aventuras, encontros, NPCs e recompensas ( Sim eu Conferi , MUITAS vezes )",
@@ -267,7 +270,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         category: "frontend",
         technologies: ["React", "Tailwind CSS", "TypeScript","Vite"],
         role: "Full Stack Developer",
-        imageUrl: "src/assets/finApp.png",
+        imageUrl: finAppImg ,
         highlights: [
           "Registro de transações financeiras com categorias personalizadas e filtros avançados para análise detalhada de gastos.",
           "Visualização de gráficos de gastos e relatórios financeiros para tomada de decisão informada.",
@@ -448,7 +451,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         category: "gamedev",
         technologies: ["Unity", "C#", "UI Toolkit", "Scriptable Objects", "Game Design"],
         role: "Indie Game Developer",
-        imageUrl: "src/assets/brew.png",
+        imageUrl: brewImg,
         highlights: [
           "Designed a decoupled and scalable state management system in C# to govern combat turns and NPC AI routines.",
           "Developed a completely adaptive and robust user interface (UI) leveraging the modern Unity UI Toolkit framework.",
@@ -463,7 +466,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         category: "frontend",
         technologies: ["React", "Tailwind CSS", "TypeScript", "Vite"],
         role: "Full Stack Developer",
-        imageUrl: "src/assets/baralho.png",
+        imageUrl: baralhoImg,
         highlights: [
           "Fully randomized or customized narrative pathways based entirely on the Game Master's choices.",
           "OVER 551 TRILLION possible combinations of adventures, encounters, NPCs, and rewards (yes, I checked the math, multiple times).",
@@ -478,7 +481,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         category: "frontend",
         technologies: ["React", "Tailwind CSS", "TypeScript", "Vite"],
         role: "Full Stack Developer",
-        imageUrl: "src/assets/finApp.png",
+        imageUrl: finAppImg,
         highlights: [
           "Streamlined financial transaction tracking with customizable categories and advanced filtering for granular expense analysis.",
           "Integrated dynamic financial reporting and data charts to empower informed, data-driven budgeting decisions.",
