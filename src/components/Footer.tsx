@@ -1,5 +1,5 @@
 // filepath: src/components/Footer.tsx
-import { Mail, Heart } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useLanguage } from "../contexts/language-context";
 
 export default function Footer() {
@@ -47,7 +47,7 @@ export default function Footer() {
         {/* Copyright / Info */}
         <p className="site-footer__copyright">
           <span>&copy; {currentYear} {content.common.brand}. {content.footer.madeWith}</span>
-          <Heart className="site-footer__heart-icon" />
+
           <span>{content.footer.author}</span>
         </p>
 

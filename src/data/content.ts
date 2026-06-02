@@ -41,15 +41,17 @@ export interface PortfolioContent {
     titlePrefix: string;
     titleHighlight: string;
     titleSuffix: string;
-    descriptionStart: string;
+    descriptionP1: string;
+    descriptionP2Start: string;
     descriptionStrongBackend: string;
-    descriptionMiddle: string;
+    descriptionP2End: string;
+    descriptionP3Start: string;
     descriptionStrongGame: string;
-    descriptionEnd: string;
     backendCta: string;
     frontendCta: string;
     educationSenac: string;
     educationUniversity: string;
+    educationPosIA: string;
     codeName: string;
     codeComment: string;
     stackTitle: string;
@@ -107,19 +109,21 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
       author: "Gabriel Arcasa de Mendonça",
     },
     home: {
-      badge: "7+ Anos de Experiência",
+      badge: "8+ Anos de Experiência",
       titlePrefix: "Engenharia de Software .NET &",
       titleHighlight: "Arquiteturas Escaláveis",
       titleSuffix: "com Alma de Game Dev",
-      descriptionStart: "Sou Engenheiro de Software na Ambev Tech, com sólida experiência no design de microsserviços e APIs corporativas utilizando",
+      descriptionP1: "Me chamo Gabriel Arcasa, Engenheiro de Software sênior com 9 anos de experiência, atualmente Desenvolvedor na Ambev Tech.",
+      descriptionP2Start: "Possuindo uma sólida experiência no design de microsserviços e APIs corporativas utilizando",
       descriptionStrongBackend: ".NET, Azure, Docker, Kubernetes e Mensageria assíncrona",
-      descriptionMiddle: "Concomitante à arquitetura de backend, aplico minha forte paixão por desenvolvimento de jogos digitais explorando",
-      descriptionStrongGame: "Unity, Unreal Engine e programação em C# e C++",
-      descriptionEnd: "unindo a robustez corporativa com técnicas avançadas de interatividade.",
+      descriptionP2End: ", Concomitante à arquitetura de backend.",
+      descriptionP3Start: "Em meu tempo livre gosto de aplicar minha forte paixão por desenvolvimento de jogos digitais explorando",
+      descriptionStrongGame: "Unity, Unreal Engine e programação em C# e C++.",
       backendCta: "Ver Portfólio Backend",
       frontendCta: "Ver Jogos & Frontend",
       educationSenac: "Bacharelado em Ciência da Computação",
       educationUniversity: "Pós-Graduação em Desenvolvimento de Jogos Digitais",
+      educationPosIA: "Pós-Graduação em Desenvolvimento de Inteligência Artificial",
       codeName: "Gabriel Arcasa",
       codeComment: "// Especialista em backend .NET e apaixonado por desenvolvimento de jogos",
       stackTitle: "Stack Tecnológica & Competências",
@@ -323,15 +327,17 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
       titlePrefix: ".NET Software Engineering &",
       titleHighlight: "Scalable Architectures",
       titleSuffix: "with a Game Dev Core",
-      descriptionStart: "I am a Software Engineer at Ambev Tech, with strong experience designing microservices and enterprise APIs using",
-      descriptionStrongBackend: ".NET, Azure, Docker, Kubernetes, and Asynchronous Messaging",
-      descriptionMiddle: "Concurrently with backend architecture, I apply my true passion for digital game development by mastering",
-      descriptionStrongGame: "Unity, Unreal Engine, and C# / C++ programming",
-      descriptionEnd: "blending enterprise robustness with advanced interactive engineering practices.",
+      descriptionP1: "I am a Senior Software Engineer with 9 years of experience, currently a Developer at Ambev Tech.",
+      descriptionP2Start: "Possessing solid experience in designing microservices and enterprise APIs using",
+      descriptionStrongBackend: ".NET, Azure, Docker, Kubernetes, and asynchronous messaging",
+      descriptionP2End: ", alongside backend architecture.",
+      descriptionP3Start: "In my spare time, I like to apply my strong passion for digital game development by exploring",
+      descriptionStrongGame: "Unity, Unreal Engine, and C# and C++ programming.",
       backendCta: "View Backend Portfolio",
       frontendCta: "View Games & Frontend",
       educationSenac: "Bachelor of Computer Science",
       educationUniversity: "Postgraduate Degree in Digital Game Development",
+      educationPosIA: "Postgraduate Degree in AI Development",
       codeName: "Gabriel Arcasa",
       codeComment: "// Specialized in .NET backend, deeply passionate about game development",
       stackTitle: "Technology Stack & Core Skills",

@@ -21,9 +21,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      {/* Hero Section */}
       <section className="home-hero">
-        {/* Left Side: Copy and CTAs */}
         <div className="home-hero__content">
           <div className="home-hero__badge">
             <Award className="home-hero__badge-icon" />
@@ -38,12 +36,19 @@ export default function Home() {
             {home.titleSuffix}
           </h1>
 
-          <p className="home-hero__description">
-            {home.descriptionStart} <span className="home-hero__description-strong">{home.descriptionStrongBackend}</span>.{" "}
-            {home.descriptionMiddle} <span className="home-hero__description-strong">{home.descriptionStrongGame}</span>, {home.descriptionEnd}
-          </p>
+          <div className="home-hero__description-wrapper">
+            <p className="home-hero__description">
+              {home.descriptionP1}
+            </p>            
+            <p className="home-hero__description">
+              {home.descriptionP2Start} <span className="home-hero__description-strong">{home.descriptionStrongBackend}</span>{home.descriptionP2End}
+            </p>
 
-          {/* Call to Actions */}
+            <p className="home-hero__description">
+              {home.descriptionP3Start} <span className="home-hero__description-strong">{home.descriptionStrongGame}</span>.
+            </p>
+          </div>
+
           <div className="home-hero__actions">
             <Link
               to="/backend"
@@ -61,7 +66,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Quick Academic Info */}
           <div className="home-hero__education">
             <span className="home-hero__education-item">
               <GraduationCap className="home-hero__education-icon" />
@@ -72,18 +76,19 @@ export default function Home() {
               <GraduationCap className="home-hero__education-icon" />
               {home.educationUniversity}
             </span>
+            <span className="home-hero__education-separator" />
+            <span className="home-hero__education-item">
+              <GraduationCap className="home-hero__education-icon" />
+              {home.educationPosIA}
+            </span>
           </div>
         </div>
 
-        {/* Right Side: Visual Artwork (100% Tailwind) */}
         <div className="home-visual">
-          {/* Background glowing blobs */}
           <div className="home-visual__glow home-visual__glow--primary" />
           <div className="home-visual__glow home-visual__glow--secondary" />
 
-          {/* Interactive IDE / Screen Frame */}
           <div className="code-window">
-            {/* Header bar */}
             <div className="code-window__header">
               <div className="code-window__traffic-lights">
                 <span className="code-window__traffic-light code-window__traffic-light--red" />
@@ -96,7 +101,6 @@ export default function Home() {
               <div className="code-window__spacer" />
             </div>
 
-            {/* Code Body */}
             <div className="code-window__body">
               <p className="code-line--indigo"><span className="code-token--purple">using</span> System;</p>
               <p className="code-line--indigo"><span className="code-token--purple">using</span> AmbevTech.Logistic.Core;</p>
@@ -121,7 +125,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interactive Tech Stack Grid */}
       <section className="tech-stack">
         <div className="tech-stack__intro">
           <h2 className="tech-stack__title">
@@ -138,7 +141,6 @@ export default function Home() {
               key={idx}
               className="skill-card"
             >
-              {/* Category Header */}
               <div className="skill-card__header">
                 <div className="skill-card__icon-frame">
                   {getSkillIcon(skillGroup)}
@@ -148,12 +150,10 @@ export default function Home() {
                 </h3>
               </div>
 
-              {/* Description */}
               <p className="skill-card__description">
                 {skillGroup.description}
               </p>
 
-              {/* Skills Items */}
               <div className="skill-card__items">
                 {skillGroup.items.map((item, itemIdx) => (
                   <div key={itemIdx} className="skill-card__item">
