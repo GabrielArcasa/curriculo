@@ -5,10 +5,12 @@ import Home from "./pages/Home";
 import FrontendPortfolio from "./pages/FrontendPortfolio";
 import BackendPortfolio from "./pages/BackendPortfolio";
 import { LanguageProvider } from "./contexts/LanguageProvider";
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (
     <LanguageProvider>
+      <Analytics />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

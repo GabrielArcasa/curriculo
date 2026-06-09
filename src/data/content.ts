@@ -105,8 +105,8 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
       menuToggleLabel: "Alternar menu de navegação",
     },
     footer: {
-      madeWith: "Feito com orgulho por",
-      author: "Gabriel Arcasa de Mendonça",
+      madeWith: "Feito por",
+      author: "Gabriel Arcasa de Mendonça.  Fale comigo : contato@arcasa.dev",
     },
     home: {
       badge: "8+ Anos de Experiência",
@@ -166,7 +166,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
             { name: "Android SDK", level: "Intermediário" },
             { name: "React / TypeScript / JavaScript", level: "Intermediário" },
             { name: "Tailwind CSS", level: "Intermediário" },
-          
+
           ],
         },
       ],
@@ -258,7 +258,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         title: "Gerador de Aventuras - T20",
         description: "Um gerador de aventuras baseado no Baralho de Aventuras do sistema Tormenta 20, criado para auxiliar mestres de RPG a criar narrativas e encontros de maneira rápida e dinâmica.",
         category: "frontend",
-        technologies: ["React", "Tailwind CSS", "TypeScript","Vite"],
+        technologies: ["React", "Tailwind CSS", "TypeScript", "Vite"],
         role: "Full Stack Developer",
         imageUrl: baralhoImg,
         highlights: [
@@ -268,14 +268,14 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         ],
         liveUrl: "https://gerador-aventura.vercel.app/",
       },
-     {
+      {
         id: "financas-app",
         title: "FinApp Pro",
         description: "Aplicativo de uso exclusivo para controle financeiro pessoal, com funcionalidades de registro de despesas, receitas e visualização de gráficos de gastos.",
         category: "frontend",
-        technologies: ["React", "Tailwind CSS", "TypeScript","Vite"],
+        technologies: ["React", "Tailwind CSS", "TypeScript", "Vite"],
         role: "Full Stack Developer",
-        imageUrl: finAppImg ,
+        imageUrl: finAppImg,
         highlights: [
           "Registro de transações financeiras com categorias personalizadas e filtros avançados para análise detalhada de gastos.",
           "Visualização de gráficos de gastos e relatórios financeiros para tomada de decisão informada.",

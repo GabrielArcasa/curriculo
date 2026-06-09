@@ -27,16 +27,16 @@ export default function Footer() {
     },
     {
       name: "E-mail",
-      href: "mailto:gabriel.arcasa97@gmail.com",
+      href: "mailto:contato@arcasa.dev",
       icon: <Mail className="site-footer__social-icon" />,
     },
-        {
+    {
       name: "itch.io",
       href: "https://gabrielarcasa.itch.io/",
       icon: (
-<svg viewBox="0 0 24 24" className="site-footer__social-icon" xmlns="http://www.w3.org/2000/svg">
-  <path d="M3.522 4.417c-.772 0-1.428.536-1.583 1.29L.044 14.86c-.1.493.107 1 .521 1.272l3.414 2.247A1.6 1.6 0 0 0 4.84 18.6h14.322c.323 0 .633-.098.86-.22l3.415-2.248c.414-.27.622-.78.522-1.272l-1.895-9.153c-.155-.754-.81-1.29-1.583-1.29H3.522zm3.32 4.887a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88zm10.316 0a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z" />
-</svg>
+        <svg viewBox="0 0 24 24" className="site-footer__social-icon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.522 4.417c-.772 0-1.428.536-1.583 1.29L.044 14.86c-.1.493.107 1 .521 1.272l3.414 2.247A1.6 1.6 0 0 0 4.84 18.6h14.322c.323 0 .633-.098.86-.22l3.415-2.248c.414-.27.622-.78.522-1.272l-1.895-9.153c-.155-.754-.81-1.29-1.583-1.29H3.522zm3.32 4.887a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88zm10.316 0a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z" />
+        </svg>
       ),
     },
   ];
