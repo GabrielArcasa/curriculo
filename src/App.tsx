@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import FrontendPortfolio from "./pages/FrontendPortfolio";
 import BackendPortfolio from "./pages/BackendPortfolio";
 import { LanguageProvider } from "./contexts/LanguageProvider";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
