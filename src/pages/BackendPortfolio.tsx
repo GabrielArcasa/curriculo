@@ -2,11 +2,13 @@
 import ProjectCard from "../components/ProjectCard";
 import { Server, Cpu, Database } from "lucide-react";
 import { useLanguage } from "../contexts/language-context";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function BackendPortfolio() {
   const { content } = useLanguage();
   const projects = content.projects.filter((project) => project.category === "backend");
   const pageContent = content.portfolio.backend;
+  usePageTitle(pageContent.title);
 
   return (
     <div className="portfolio-page">

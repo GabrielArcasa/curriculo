@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import FrontendPortfolio from "./pages/FrontendPortfolio";
 import BackendPortfolio from "./pages/BackendPortfolio";
+import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageProvider";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -17,6 +18,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="frontend" element={<FrontendPortfolio />} />
             <Route path="backend" element={<BackendPortfolio />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

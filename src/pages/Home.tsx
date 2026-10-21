@@ -2,11 +2,13 @@
 import { ArrowRight, Gamepad2, Database, Award, GraduationCap, Server, Terminal } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/language-context";
-import type { SkillGroup } from "../data/content";
+import { EXPERIENCE_YEARS, type SkillGroup } from "../data/content";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function Home() {
   const { content } = useLanguage();
   const { home } = content;
+  usePageTitle(home.pageTitle);
 
   const getSkillIcon = (skillGroup: SkillGroup) => {
     switch (skillGroup.icon) {
@@ -45,7 +47,7 @@ export default function Home() {
             </p>
 
             <p className="home-hero__description">
-              {home.descriptionP3Start} <span className="home-hero__description-strong">{home.descriptionStrongGame}</span>.
+              {home.descriptionP3Start} <span className="home-hero__description-strong">{home.descriptionStrongGame}</span>
             </p>
           </div>
 
@@ -108,7 +110,7 @@ export default function Home() {
               <p><span className="code-token--blue">public class</span> <span className="code-token--emerald">Developer</span></p>
               <p>{"{"}</p>
               <p className="code-line--indent-1"><span className="code-token--blue">public string</span> Name {"=>"} <span className="code-token--amber">"{home.codeName}"</span>;</p>
-              <p className="code-line--indent-1"><span className="code-token--blue">public int</span> ExperienceYears {"=>"} <span className="code-token--rose">9</span>;</p>
+              <p className="code-line--indent-1"><span className="code-token--blue">public int</span> ExperienceYears {"=>"} <span className="code-token--rose">{EXPERIENCE_YEARS}</span>;</p>
               <p className="code-line--indent-1"><span className="code-token--blue">public string[]</span> PrimaryStack {"=>"} <span className="code-token--blue">new</span>[] {"{"}</p>
               <p className="code-line--indent-2 code-token--cyan">".NET Core", "Azure", "Kubernetes","Cloud", "EF Core", "SQL" , "C++", "UE5", "Unity"</p>
               <p className="code-line--indent-1">{"};"}</p>

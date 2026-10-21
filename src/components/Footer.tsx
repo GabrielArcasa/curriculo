@@ -28,7 +28,7 @@ export default function Footer() {
     {
       name: "E-mail",
       href: "mailto:contato@arcasa.dev",
-      icon: <Mail className="site-footer__social-icon" />,
+      icon: <Mail className="site-footer__social-icon site-footer__social-icon--stroke" />,
     },
     {
       name: "itch.io",

@@ -5,6 +5,9 @@ import finAppImg from "../assets/finApp.png";
 
 export type Language = "pt" | "en";
 
+/** Fonte única dos anos de experiência (badge, textos e janela de código). */
+export const EXPERIENCE_YEARS = 9;
+
 export interface SkillItem {
   name: string;
   level: string;
@@ -36,7 +39,14 @@ export interface PortfolioContent {
     madeWith: string;
     author: string;
   };
+  notFound: {
+    pageTitle: string;
+    title: string;
+    text: string;
+    cta: string;
+  };
   home: {
+    pageTitle: string;
     badge: string;
     titlePrefix: string;
     titleHighlight: string;
@@ -106,17 +116,24 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
     },
     footer: {
       madeWith: "Feito por",
-      author: "Gabriel Arcasa de Mendonça.  Fale comigo : contato@arcasa.dev",
+      author: "Gabriel Arcasa de Mendonça. Fale comigo: contato@arcasa.dev",
+    },
+    notFound: {
+      pageTitle: "Página não encontrada",
+      title: "Esta página não existe",
+      text: "O endereço pode ter mudado ou foi digitado errado. Volte ao início para ver meus projetos e experiência.",
+      cta: "Voltar ao início",
     },
     home: {
-      badge: "8+ Anos de Experiência",
+      pageTitle: "Gabriel Arcasa · Engenheiro de Software .NET",
+      badge: `${EXPERIENCE_YEARS}+ Anos de Experiência`,
       titlePrefix: "Engenharia de Software .NET &",
       titleHighlight: "Arquiteturas Escaláveis",
       titleSuffix: "com Alma de Game Dev",
-      descriptionP1: "Me chamo Gabriel Arcasa, Engenheiro de Software sênior com 9 anos de experiência, atualmente Desenvolvedor na Ambev Tech.",
-      descriptionP2Start: "Possuindo uma sólida experiência no design de microsserviços e APIs corporativas utilizando",
+      descriptionP1: `Me chamo Gabriel Arcasa, Software Engineer II na Ambev Tech, com ${EXPERIENCE_YEARS} anos de experiência em desenvolvimento de software.`,
+      descriptionP2Start: "Tenho sólida experiência no design de microsserviços e APIs corporativas com",
       descriptionStrongBackend: ".NET, Azure, Docker, Kubernetes e Mensageria assíncrona",
-      descriptionP2End: ", Concomitante à arquitetura de backend.",
+      descriptionP2End: ".",
       descriptionP3Start: "Em meu tempo livre gosto de aplicar minha forte paixão por desenvolvimento de jogos digitais explorando",
       descriptionStrongGame: "Unity, Unreal Engine e programação em C# e C++.",
       backendCta: "Ver Portfólio Backend",
@@ -147,7 +164,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
           icon: "devops",
           description: "Gerenciamento e sustentação de infraestruturas em nuvem modernas, barramentos de eventos e esteiras automatizadas de deploy.",
           items: [
-            { name: "Azure (Event Bus / Cloud Ecossystem)", level: "Avançado" },
+            { name: "Azure (Event Bus / Cloud Ecosystem)", level: "Avançado" },
             { name: "RabbitMQ / Azure Service Bus", level: "Avançado" },
             { name: "Kubernetes / Rancher", level: "Avançado" },
             { name: "Docker", level: "Avançado" },
@@ -242,14 +259,14 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
       {
         id: "brew-and-battle",
         title: "Brew and Battle",
-        description: "Jogo indie autoral de estratégia onde o jogador assume o papel de um alquimista lacaio de um chefão, e tem que produzir poções para auxilia-lo a derrotar os heróis invasores. Desenvolvido do zero utilizando Unity e C#, com foco em mecânicas e uma interface de usuário.",
+        description: "Jogo indie autoral de estratégia onde o jogador assume o papel de um alquimista lacaio de um chefão, e tem que produzir poções para auxiliá-lo a derrotar os heróis invasores. Desenvolvido do zero utilizando Unity e C#, com foco em mecânicas e interface de usuário.",
         category: "gamedev",
         technologies: ["Unity", "C#", "Scriptable Objects", "Game Design"],
         role: "Indie Game Developer",
         imageUrl: brewImg,
         highlights: [
-          "Feito em apenas 2 Semanas para uma GameJam",
-          "Desenvolveu todas as mecanicas e sistema de poções.",
+          "Feito em apenas 2 semanas para uma game jam.",
+          "Desenvolveu todas as mecânicas e o sistema de poções.",
         ],
         liveUrl: "https://gabrielarcasa.itch.io/brew-and-battle",
       },
@@ -262,8 +279,8 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         role: "Full Stack Developer",
         imageUrl: baralhoImg,
         highlights: [
-          "Narrativa Totalmente Aleatoria ou Personalizada a Escolha do Mestre",
-          "MAIS DE 551 TRILHÕES de combinações possíveis de aventuras, encontros, NPCs e recompensas ( Sim eu Conferi , MUITAS vezes )",
+          "Narrativa totalmente aleatória ou personalizada, à escolha do mestre.",
+          "MAIS DE 551 TRILHÕES de combinações possíveis de aventuras, encontros, NPCs e recompensas (sim, eu conferi, MUITAS vezes).",
           "Desenvolvimento de uma interface limpa e responsiva utilizando React e Tailwind CSS, garantindo acessibilidade e usabilidade em diversos dispositivos.",
         ],
         liveUrl: "https://gerador-aventura.vercel.app/",
@@ -320,17 +337,24 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
     },
     footer: {
       madeWith: "Proudly built by",
-      author: "Gabriel Arcasa de Mendonça",
+      author: "Gabriel Arcasa de Mendonça. Get in touch: contato@arcasa.dev",
+    },
+    notFound: {
+      pageTitle: "Page not found",
+      title: "This page doesn't exist",
+      text: "The address may have changed or been mistyped. Head back home to see my projects and experience.",
+      cta: "Back to home",
     },
     home: {
-      badge: "7+ Years of Experience",
+      pageTitle: "Gabriel Arcasa · .NET Software Engineer",
+      badge: `${EXPERIENCE_YEARS}+ Years of Experience`,
       titlePrefix: ".NET Software Engineering &",
       titleHighlight: "Scalable Architectures",
       titleSuffix: "with a Game Dev Core",
-      descriptionP1: "I am a Senior Software Engineer with 9 years of experience, currently a Developer at Ambev Tech.",
-      descriptionP2Start: "Possessing solid experience in designing microservices and enterprise APIs using",
+      descriptionP1: `I am Gabriel Arcasa, a Software Engineer II at Ambev Tech with ${EXPERIENCE_YEARS} years of experience in software development.`,
+      descriptionP2Start: "I have solid experience designing microservices and enterprise APIs with",
       descriptionStrongBackend: ".NET, Azure, Docker, Kubernetes, and asynchronous messaging",
-      descriptionP2End: ", alongside backend architecture.",
+      descriptionP2End: ".",
       descriptionP3Start: "In my spare time, I like to apply my strong passion for digital game development by exploring",
       descriptionStrongGame: "Unity, Unreal Engine, and C# and C++ programming.",
       backendCta: "View Backend Portfolio",
@@ -462,7 +486,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
         role: "Indie Game Developer",
         imageUrl: brewImg,
         highlights: [
-          "Done in only 2 weeks for a gamejam",
+          "Built in just 2 weeks for a game jam.",
           "Developed all mechanics and potion system.",
         ],
         liveUrl: "https://gabrielarcasa.itch.io/brew-and-battle",

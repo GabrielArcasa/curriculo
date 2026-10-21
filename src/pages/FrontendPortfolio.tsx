@@ -2,11 +2,13 @@
 import ProjectCard from "../components/ProjectCard";
 import { Monitor, Gamepad2, Sparkles } from "lucide-react";
 import { useLanguage } from "../contexts/language-context";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function FrontendPortfolio() {
   const { content } = useLanguage();
   const projects = content.projects.filter((project) => project.category === "frontend" || project.category === "gamedev");
   const pageContent = content.portfolio.frontend;
+  usePageTitle(pageContent.title);
 
   return (
     <div className="portfolio-page">
