@@ -2,6 +2,8 @@ import type { Project } from "./projects";
 import brewImg from "../assets/brew.png";
 import baralhoImg from "../assets/baralho.png";
 import finAppImg from "../assets/finApp.png";
+import calculadoraGamedevImg from "../assets/calculadoraGamedev.png";
+import gatoPadeiroImg from "../assets/gatoPadeiro.png";
 
 export type Language = "pt" | "en";
 
@@ -208,7 +210,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
     },
     projectCard: {
       highlightsTitle: "Destaques e Conquistas de Engenharia",
-      codeLink: "Código Privado / Enterprise",
+      codeLink: "Ver código",
       demoLink: "Acessar Plataforma",
     },
     projects: [
@@ -255,6 +257,39 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
           "Garantiu desacoplamento e estabilidade sob alto pico de acessos assíncronos implementando filas resilientes via Azure Service Bus.",
         ],
         repoUrl: "",
+      },
+      {
+        id: "calculadora-gamedev",
+        title: "Calculadora Game Dev BR",
+        description: "Calculadora gratuita e open source para estúdios de jogos brasileiros. Mostra quanto sobra de cada venda depois da loja, da engine e dos impostos, até o valor líquido de cada sócio. Começou como uma planilha do nosso estúdio e virou uma ferramenta pública.",
+        category: "frontend",
+        technologies: ["React", "TypeScript", "Vite", "Vitest", "Cloudflare Workers"],
+        company: "Gato Padeiro",
+        role: "Criador e Desenvolvedor",
+        imageUrl: calculadoraGamedevImg,
+        highlights: [
+          "Motor de cálculo em TypeScript puro, separado da interface e coberto por testes. Cada regra fiscal traz a fonte e a data de vigência.",
+          "Junta no mesmo cálculo Steam, Epic, consoles e mobile, o royalty da Unreal, a retenção de 30% dos EUA, o Simples Nacional com Fator R, o Lucro Presumido, o pró-labore e os dividendos.",
+          "Câmbio em tempo real e cenário compartilhável por link, sem backend nem cadastro: tudo roda no navegador.",
+        ],
+        liveUrl: "https://calculadoragamedev.com.br",
+        repoUrl: "https://github.com/GatoPadeiro/calculadoragamedev",
+      },
+      {
+        id: "gato-padeiro-site",
+        title: "Gato Padeiro · Site do Estúdio",
+        description: "Site oficial do meu estúdio independente de jogos: vitrine dos jogos, blog de devlogs e página da equipe, com uma interface temática de forno de padaria em português e inglês.",
+        category: "frontend",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Sanity CMS", "Cloudflare Workers"],
+        company: "Gato Padeiro",
+        role: "Cofundador e Desenvolvedor",
+        imageUrl: gatoPadeiroImg,
+        highlights: [
+          "Jogos, posts e equipe editados no Sanity Studio: o time publica sem mexer no código, e dá para esconder um post do site e da URL.",
+          "Bilíngue (PT/EN) com next-intl.",
+          "Deploy em Cloudflare Workers via OpenNext, com cache no R2 e o token de leitura do CMS só no servidor.",
+        ],
+        liveUrl: "https://www.gatopadeiro.com.br",
       },
       {
         id: "brew-and-battle",
@@ -429,7 +464,7 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
     },
     projectCard: {
       highlightsTitle: "Engineering Achievements & Highlights",
-      codeLink: "Private / Enterprise Repository",
+      codeLink: "View code",
       demoLink: "Open Application",
     },
     projects: [
@@ -476,6 +511,39 @@ export const contentByLanguage: Record<Language, PortfolioContent> = {
           "Maintained platform durability and performance during massive traffic surges by leveraging Azure Service Bus for messaging decoupled tiers.",
         ],
         repoUrl: "",
+      },
+      {
+        id: "calculadora-gamedev",
+        title: "Calculadora Game Dev BR",
+        description: "A free, open source calculator for Brazilian game studios. It shows how much of each sale is left after the store, the engine and taxes, all the way down to each partner's net share. It started as a spreadsheet for our own studio and became a public tool.",
+        category: "frontend",
+        technologies: ["React", "TypeScript", "Vite", "Vitest", "Cloudflare Workers"],
+        company: "Gato Padeiro",
+        role: "Creator & Developer",
+        imageUrl: calculadoraGamedevImg,
+        highlights: [
+          "Calculation engine written in plain TypeScript, decoupled from the UI and covered by tests. Every tax rule carries its source and effective date.",
+          "Combines Steam, Epic, console and mobile store fees, Unreal royalties, the 30% US withholding, Brazil's Simples Nacional (with Fator R), Lucro Presumido, partner salaries and dividends in a single calculation.",
+          "Live exchange rates and scenarios shareable by link, with no backend or sign-up: everything runs in the browser.",
+        ],
+        liveUrl: "https://calculadoragamedev.com.br",
+        repoUrl: "https://github.com/GatoPadeiro/calculadoragamedev",
+      },
+      {
+        id: "gato-padeiro-site",
+        title: "Gato Padeiro · Studio Website",
+        description: "The official website of my independent game studio: a showcase for our games, a devlog blog and a team page, wrapped in a bakery-oven themed interface in Portuguese and English.",
+        category: "frontend",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Sanity CMS", "Cloudflare Workers"],
+        company: "Gato Padeiro",
+        role: "Co-founder & Developer",
+        imageUrl: gatoPadeiroImg,
+        highlights: [
+          "Games, posts and team members are managed in Sanity Studio, so the team publishes without touching code, including an option to hide a post from the site and its URL.",
+          "Bilingual (PT/EN) with next-intl.",
+          "Deployed on Cloudflare Workers via OpenNext, with R2 caching and the CMS read token kept server-side only.",
+        ],
+        liveUrl: "https://www.gatopadeiro.com.br",
       },
       {
         id: "brew-and-battle",
